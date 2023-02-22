@@ -4,6 +4,7 @@ import { Alert, AlertIcon, Flex, HStack, VStack, StackDivider } from '@chakra-ui
 import Balance from '@/components/Wallet/Balance'
 import Withdraw from '@/components/Wallet/Withdraw'
 import Deposit from '@/components/Wallet/Deposit'
+import History from '@/components/Wallet/History'
 const contractAddress = '0xB7f8BC63BbcaD18155201308C8f3540b07f84F5e'
 
 const Main = () => {
@@ -18,6 +19,7 @@ const Main = () => {
                         <Deposit address={contractAddress} />
                         <Withdraw address={contractAddress} />
                     </HStack>
+                    <History address={contractAddress} />
                 </VStack>
             ) : (
                 <Alert status="warning">
